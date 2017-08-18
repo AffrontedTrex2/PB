@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GemCount : MonoBehaviour {
 
     Text txt;
-    private int gems = 0;
+    public int gems;
     private int gems2;
+    public GlobalControl global;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         txt = GameObject.Find("MainText").GetComponent<Text>();
         txt.text = "Gems: " + gems;
     }

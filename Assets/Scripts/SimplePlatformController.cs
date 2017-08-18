@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SimplePlatformController : MonoBehaviour {
 
-    [HideInInspector] public bool facingRight = true;
+    [HideInInspector] public bool facingLeft = true;
     [HideInInspector] public bool jump = false;
     public float moveForce = 365f;
     public float maxSpeed = 5f;
@@ -44,9 +44,9 @@ public class SimplePlatformController : MonoBehaviour {
         if (Mathf.Abs(rb2d.velocity.x) > maxSpeed)
             rb2d.velocity = new Vector2(Mathf.Sign(rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);
 
-        if (h > 0 && !facingRight)
+        if (h > 0 && facingLeft)
             Flip();
-        else if (h < 0 && facingRight)
+        else if (h < 0 && !facingLeft)
             Flip();
 
         if (jump)
@@ -59,7 +59,7 @@ public class SimplePlatformController : MonoBehaviour {
         
     void Flip()
     {
-        facingRight = !facingRight;
+        facingLeft = !facingLeft;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;

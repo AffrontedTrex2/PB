@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeCharacter : MonoBehaviour {
+public class ChangeCharacter : MonoBehaviour
+{
 
     GameObject zach, stan;
     int characterSelect;
@@ -10,20 +11,22 @@ public class ChangeCharacter : MonoBehaviour {
     public bool Trigger = false;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         characterSelect = 1; //current character
         zach = GameObject.Find("hero");
-        stan = GameObject.Find("Player2");
+        stan = GameObject.Find("hero2");
         transform.position = new Vector3(3, 0, 0);
 
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         Vector3 pos = GameObject.FindGameObjectWithTag("Player").transform.position; //current position of Player
         Vector3 oldPos = new Vector3(2, 1, 0); //Empty old position vector
-        
+
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -62,7 +65,7 @@ public class ChangeCharacter : MonoBehaviour {
                 zach.SetActive(false); //Activate Stan
                 stan.SetActive(true);
 
-                GameObject.Find("Player2").transform.position = oldPos; //Set Stan's position to the previous players' old position.
+                GameObject.Find("hero2").transform.position = oldPos; //Set Stan's position to the previous players' old position.
 
                 Trigger = true;
 

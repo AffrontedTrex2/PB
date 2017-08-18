@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PickupCoin : MonoBehaviour
 {
-    public GemCount gems; //Reference GemCount.cs, called gems.
+    public GemCount gems;
     public bool HasBeenCollected = false;
 
     // Use this for initialization
@@ -20,9 +20,8 @@ public class PickupCoin : MonoBehaviour
 
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hello");
         if (collision.gameObject.CompareTag("Player"))
         {
             if (HasBeenCollected == false)
@@ -30,9 +29,8 @@ public class PickupCoin : MonoBehaviour
                 HasBeenCollected = true;
                 Destroy(gameObject);
                 gems.ChangeGemCount();
-
             }
-            
+           
         }
     }
 }

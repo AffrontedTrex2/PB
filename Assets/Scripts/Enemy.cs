@@ -20,7 +20,6 @@ public class Enemy : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("a");
         if (collision.gameObject.CompareTag("Player"))
         {
             if (!hasCollided)
