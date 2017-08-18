@@ -23,7 +23,12 @@ public class endLevel : MonoBehaviour {
         {
             global.saveGems();
             Debug.Log(global.gems);
-            SceneManager.LoadScene("Level 2");
+            if (SceneManager.GetActiveScene().name == "Level1")
+                SceneManager.LoadScene("Level 2");
+            if (SceneManager.GetActiveScene().name == "Level 2")
+                SceneManager.LoadScene("Dialogue3");
+            if (SceneManager.GetActiveScene().name == "Level 3")
+                SceneManager.LoadScene("Dialogue5");
         }
     }
 }

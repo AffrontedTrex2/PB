@@ -65,11 +65,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1951381813100960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a984e45014d09842a5153b451f80b9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7532c55447d012948b24ad728432db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemCount: {fileID: 0}
-  gemSave: 0
+  global: {fileID: 0}
 --- !u!212 &212585736637671474
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -102,7 +101,7 @@ SpriteRenderer:
   m_SortingLayerID: 1024582385
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5a3dc81ecdc4cbd4ab5f16c7480dccd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6671c06b9ff2b0b42af11c2e9ef0e387, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

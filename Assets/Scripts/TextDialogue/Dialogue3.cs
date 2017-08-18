@@ -32,10 +32,10 @@ public class Dialogue3 : MonoBehaviour
         txt2.text = people.text;
         Debug.Log(txt2);
 
-        theSourceFile = new FileInfo("Assets/DialogueText/Dialogue3.txt"); //Change File name
+        theSourceFile = new FileInfo("Assets/Scripts/TextDialogue/Dialogue3.txt"); //Change File name
         reader = theSourceFile.OpenText();
 
-        PeopleSourceFile = new FileInfo("Assets/DialogueText/Dialogue3People.txt"); //Change File name
+        PeopleSourceFile = new FileInfo("Assets/Scripts/TextDialogue/Dialogue3People.txt"); //Change File name
         reader2 = PeopleSourceFile.OpenText();
 
         text = reader.ReadLine();
@@ -73,7 +73,7 @@ public class Dialogue3 : MonoBehaviour
         if (nextLevel == false)
         {
             Debug.Log("Helloeoeoeoeo");
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Dialogue4");
             nextLevel = true;
         }
     }

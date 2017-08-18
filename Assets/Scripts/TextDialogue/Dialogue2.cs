@@ -32,10 +32,10 @@ public class Dialogue2 : MonoBehaviour
         txt2.text = people.text;
         Debug.Log(txt2);
 
-        theSourceFile = new FileInfo("Assets/DialogueText/Dialogue2.txt"); //Change File name
+        theSourceFile = new FileInfo("Assets/Scripts/TextDialogue/Dialogue2.txt"); //Change File name
         reader = theSourceFile.OpenText();
 
-        PeopleSourceFile = new FileInfo("Assets/DialogueText/Dialogue2People.txt"); //Change File name
+        PeopleSourceFile = new FileInfo("Assets/Scripts/TextDialogue/Dialogue2People.txt"); //Change File name
         reader2 = PeopleSourceFile.OpenText();
 
         text = reader.ReadLine();
