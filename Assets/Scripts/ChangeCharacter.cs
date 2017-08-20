@@ -9,10 +9,13 @@ public class ChangeCharacter : MonoBehaviour
     int characterSelect;
     GameObject CurrentChar;
     public bool Trigger = false;
+<<<<<<< HEAD
 	public Canvas canvas;
 
 	public Camera zachCam;
 	public Camera stanCam;
+=======
+>>>>>>> ba601f37a1336b81c1e0fe0370a1fb303b9e7c98
 
     // Use this for initialization
     void Start()
@@ -20,12 +23,18 @@ public class ChangeCharacter : MonoBehaviour
         characterSelect = 1; //current character
         zach = GameObject.Find("hero");
         stan = GameObject.Find("hero2");
+<<<<<<< HEAD
 		transform.position = new Vector3 (3, 0, 0);
 
 		//zachCam = zach.GetComponent<Camera> ();
 		//stanCam = stan.GetComponent<Camera> ();
 
 		canvas.worldCamera = zachCam;
+=======
+        transform.position = new Vector3(3, 0, 0);
+
+
+>>>>>>> ba601f37a1336b81c1e0fe0370a1fb303b9e7c98
     }
 
     // Update is called once per frame
@@ -61,7 +70,10 @@ public class ChangeCharacter : MonoBehaviour
 
                 Trigger = true; //Change trigger back to true so that it doesn't repeat more than once.
 
+<<<<<<< HEAD
 				canvas.worldCamera = zachCam;
+=======
+>>>>>>> ba601f37a1336b81c1e0fe0370a1fb303b9e7c98
 
             }
 
@@ -77,7 +89,11 @@ public class ChangeCharacter : MonoBehaviour
 
                 Trigger = true;
 
+<<<<<<< HEAD
 				canvas.worldCamera = stanCam;
+=======
+
+>>>>>>> ba601f37a1336b81c1e0fe0370a1fb303b9e7c98
             }
 
         }
